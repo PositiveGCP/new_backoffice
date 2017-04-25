@@ -1,0 +1,323 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto+Condensed:300,400,700');
+@condensada: 'Roboto Condensed';
+@normal: 'Roboto';
+@blackFont: #323232;
+@blackBG: #323232;
+@blueGCP: #26b1ff;
+// Functions
+.gbTransition( @time ){
+  -webkit-transition: all @time ease;
+  -moz-transition: all @time ease;
+  -o-transition: all @time ease;
+  transition: all @time ease;
+}
+// -- Functions
+*{
+	padding: 0;
+	margin: 0;
+}
+html, body{
+	font-family: 'Roboto', Arial, sans-serif;
+}
+body{
+	min-width: 100%;
+	width: 100%;
+	min-height: 100vh;
+	height: 100vh;
+	overflow-x: hidden;
+	display: flex;
+}
+// Completes the size for the content
+header, body, footer {
+  padding-left: 250px;
+}
+#main-wrapper{
+	min-height: 100vh;
+	height: 100vh;
+	flex: 1;
+}
+// Side Bar
+.side-nav{
+	width: 250px !important;
+  li{
+    color: #ebebeb;
+    a{
+      border-left: solid 12px @blackBG; // Avoid moving elements on hover
+      padding: 0px 10px 0px 16px !important;
+      // Height stuff
+      height: 40px;
+      line-height: 40px;
+
+      color: #ebebeb;
+      .gbTransition( 0.3s );
+      font-family: @normal, sans-serif;
+      font-size: 12px;
+      font-weight: 300;
+      letter-spacing: 0.05em;
+      text-transform: none;
+      .right{
+        display: flex;
+        justify-content: center;
+        padding: 0px !important;
+        margin-right: 0 !important;
+        left: 0;
+      }
+      i{
+        position: relative;
+        height: 40px !important;
+        line-height: 40px !important;
+        color: #ebebeb !important;
+      }
+    }
+    a:hover{
+      background:  #252525;
+      border-left: solid 12px @blueGCP;
+    }
+    .subheader{
+      text-align: center;
+      color: #ebebeb;
+      font-weight: 300;
+      text-transform: uppercase;
+      font-size: 10px;
+      letter-spacing: 0.2em;
+      height: 25px;
+      bottom: 0;
+      margin-bottom: 15px;
+    }
+    .divider{
+      background-color: #252525;
+    }
+    // Where the menu is collapsible
+    .collapsible-header{
+      padding: 0px 10px 0px 16px !important;
+      .right{
+        padding: 0px !important;
+        margin: 0px !important;
+      }
+    }
+    .collapsible .collapsible-body{
+      background: #323232;
+    }
+  }
+
+}
+.increased-navbar{
+	background: #323232;
+	.userView{
+		padding-top: 0;
+		background: #26b1ff;
+		height: 40px;
+		width: 300px;
+		display: table-cell;
+    vertical-align: middle;
+		h5{
+			color: #fff;
+			text-align: center;
+			font-family: @condensada, sans-serif;
+			font-weight: 300;
+      display: inline-block;
+		}
+    p{
+      color: #fff;
+      display: inline-block;
+      text-align: center;
+      font-family: @condensada, sans-serif;
+      text-transform: uppercase;
+      font-weight: 300;
+      padding-left: 10px;
+    }
+	}
+}
+// Space avaible
+.editable{
+	height: auto;
+	background: #f2efef;
+}
+.editable{
+	nav{
+		background: #fff;
+		height: 49px !important;
+		line-height: 49px;
+		// Position stuff
+		display: flex;
+		justify-content: flex-end;
+		color: @blackFont;
+		img{
+			margin-top: 8px;
+			border-radius: 50%;
+			border: solid 3px #e4e4e4;
+		}
+		// Center the content of the image, name of user
+		.nav-wrapper{
+			display: flex;
+			justify-content: flex-end;
+			line-height: 49px;
+			padding-right: 20px;
+			width: 100%;
+		}
+		.user-image{
+			display: block;
+			height: 30px;
+			width: 30px;
+		}
+		// To show the position on screen
+		.text-position{
+			margin-left: 20px;
+			width: 300px;
+			font-family: @condensada, sans-serif;
+			font-size: 14px;
+			border: 0px;
+		}
+		.text-position:active, .text-position:hover, .text-position:visited{
+			border-bottom: 0px !important;
+		}
+		span{
+			display: block;
+			padding: 0px 12px 0px 12px;
+			border-radius: 20px;
+			font-weight: 300;
+			font-size: 12px;
+			color: @blackFont;
+		}
+		.user-name{
+			font-family: @normal, sans-serif;
+		}
+		ul li{
+			padding: 0;
+			margin: 0;
+			a{
+				position: relative;
+				display: block;
+				line-height: 49px;
+				i{
+					display: block;
+					line-height: 29px;
+					height: 30px;
+					padding: 0px 2px 0px 3px;
+					margin: 10px 0px 10px 0px;
+					border-radius: 50%;
+					border: 1px solid #e4e4e4;
+					@gbTransition( 1s );
+				}
+				i:hover{
+					background: #f0f0f0;
+				}
+			}
+		}
+		a{
+			color: @blackFont;
+		}
+		a:hover, a:visited, a:active{
+			background: #fff;
+		}
+	}
+}
+
+#all-stuff{
+	height: 100%;
+	margin: 15px 00px 20px 0px;
+	padding: 20px 10px 40px 10px;
+	border-radius: 5px;
+	background: #fff;
+	color: #3e3e3e;
+
+	.text-space{
+		text-align: center;
+		margin-bottom: 20px;
+	}
+}
+
+// From here the positive-******* has specific formats and styles made for the positive dashboard
+
+// Cards
+.positive-content{
+	position: static;
+	width: 100%;
+	background: #292929;
+	.card-content{
+		span{
+			font-size: 20px;
+			font-weight: 200;
+			text-transform: uppercase;
+		}
+		p{
+			text-align: center;
+			font-weight: 300;
+			margin: 0;
+			padding: 0;
+			font-size: 100px;
+			line-height: 110px;
+		}
+	}
+	.card-action{
+		a{
+			text-align: center;
+			text-decoration: underline;
+			color: #fff !important;
+			font-size: 14px;
+			font-weight: 300;
+			i {
+				line-height: 10px;
+			}
+		}
+	}
+}
+// Change the color when on the side bar
+.positive-add:hover{
+  border-left: solid 12px @blueGCP !important;
+}
+.positive-position:hover{
+  border-left: solid 12px #41ab38 !important;
+}
+.positive-query:hover{
+  border-left: solid 12px #e77d49 !important;
+}
+.positive-account:hover{
+  border-left: solid 12px #dfd944 !important;
+}
+// To show something is great
+.positive-green-c{
+	color: #25ab4a !important;
+}
+// To show something is bad
+.positive-red-c{
+	color: #d6362c !important;
+}
+
+.positive-plot{
+	margin: 10px 0px 0px 0px;
+	svg{
+		border-radius: 3px !important;
+	}
+}
+
+.positive-collection{
+	font-family: @condensada, sans-serif;
+	background: #292929 !important;
+	color: #fff;
+	.collection-header, .collection-item{
+		background: #292929 !important;
+	}
+	.collection-item i{
+		color: #e2bd1e;
+	}
+}
+
+// Change materialize default tooltips
+.material-tooltip{
+	font-family: @condensada, sans-serif;
+	font-size: 12px;
+	font-weight: 400;
+	letter-spacing: 0.04em;
+	text-transform: uppercase;
+	.backdrop{
+		background-color: #393939 !important;
+	}
+}
+
+// Later will be required for the mobile view
+// @media only screen and (max-width : 992px) {
+//   header, main, footer {
+//     padding-left: 0;
+//   }
+// }

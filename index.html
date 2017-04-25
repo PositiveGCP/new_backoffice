@@ -7,15 +7,212 @@
 	<title>Document</title>
 	<!-- styles -->
 	<link rel="stylesheet" href="bower_components/materialize/dist/css/materialize.css">
-	<link rel="stylesheet/less" href="/css/main.less">
+	<link rel="stylesheet/less" href="css/main.less">
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
 	<!-- scripts -->
 	<script src="bower_components/jquery/dist/jquery.js" charset="utf-8"></script>
 	<script src="bower_components/materialize/dist/js/materialize.js" charset="utf-8"></script>
-	<script src="bower_components/jquery/dist/less.js" charset="utf-8"></script>
+	<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script> <!-- Charts -->
 </head>
 <body>
 
-	<h1>Hola!</h1>
+	<div class="row" id="main-wrapper">
+		<div class="col s2">
+			<!-- Content rendered -->
+			<ul id="slide-out" class="side-nav fixed increased-navbar z-depth-0">
+		    <li>
+					<div class="userView">
+						<h5>GCP</h5><p>RELEASE v2.2</p>
+		    	</div>
+				</li>
 
+				<!-- altas -->
+				<!-- <li class="no-padding">
+	        <ul class="collapsible collapsible-accordion">
+	          <li>
+	            <a class="collapsible-header"><i class="material-icons">group_add</i>Altas<i class="material-icons right">arrow_drop_down</i></a>
+	            <div class="collapsible-body">
+	              <ul>
+	                <li><a href="#!"><i class="material-icons">people</i>Personas</a></li>
+	                <li><a href="#!"><i class="material-icons">report</i>Incidentes</a></li>
+	                <li><a href="#!"><i class="material-icons">supervisor_account</i>Cuentas</a></li>
+									<li><div class="divider"></div></li>
+	                <li><a href="#!">Servicios</a></li>
+									<li><a href="#!">Comunidades</a></li>
+	              </ul>
+	            </div>
+	          </li>
+	        </ul>
+      	</li> -->
+				<!-- /altas -->
+
+				<!-- altas -->
+				<li><a class="subheader">Altas</a></li>
+				<li><div class="divider"></div></li>
+				<li><a href="#!" class="positive-add"><i class="material-icons">people</i>Personas</a></li>
+				<li><a href="#!" class="positive-add"><i class="material-icons">report</i>Incidentes</a></li>
+				<li><a href="#!" class="positive-add"><i class="material-icons">supervisor_account</i>Cuentas</a></li>
+				<li><a href="#!" class="positive-add"><i class="material-icons">important_devices</i>Servicios</a></li>
+				<li><a href="#!" class="positive-add"><i class="material-icons">language</i>Comunidades</a></li>
+				<!-- /altas -->
+
+				<!-- posiciones -->
+				<li><a class="subheader">Posiciones</a></li>
+				<li><div class="divider"></div></li>
+				<li><a href="#!" class="positive-position"><i class="material-icons">description</i>Mis posiciones</a></li>
+				<li><a href="#!" class="positive-position"><i class="material-icons">reorder</i>Plantilla</a></li>
+				<!-- /posiciones -->
+
+				<!-- posiciones -->
+				<li><a class="subheader">Consultas</a></li>
+				<li><div class="divider"></div></li>
+				<li><a href="#!" class="positive-query"><i class="material-icons">done</i>Resultados</a></li>
+				<li><a href="#!" class="positive-query"><i class="material-icons">track_changes</i>Pendientes</a></li>
+				<li><a href="#!" class="positive-query"><i class="material-icons">report</i>Incidentes</a></li>
+				<li><a href="#!" class="positive-query"><i class="material-icons">today</i>Agenda</a></li>
+				<!-- /posiciones -->
+
+				<!-- configuracion -->
+				<li><div class="divider"></div></li>
+				<li><a class="subheader">Configuración</a></li>
+				<li><a href="#!" class="positive-account"><i class="material-icons">account_circle</i>Cuenta</a></li>
+				<li><a href="#!" class="positive-account"><i class="material-icons">attach_money</i>Facturación</a></li>
+				<!-- /configuracion -->
+
+				<!-- final -->
+				<li><div class="divider"></div></li>
+				<li><a class="subheader">POSITIVE COMPLIANCE</a></li>
+				<li><div class="divider"></div></li>
+				<!-- /final -->
+
+		  </ul>
+		</div>
+		<div class="col s12 editable">
+
+				<nav class="z-depth-0">
+					<!-- <form action="#!" method="post">
+						<input class="left text-position" type="text" name="criterio" value="" placeholder="Buscar ...">
+					</form> -->
+					<span class="left text-position">Soy una barra de búsqueda.</span>
+						<div class="nav-wrapper z-depth-0">
+						 <img src="images/user.png" class="user-image" alt="userimg">
+						 <span class="user-name">Nombre Apellido</span>
+						 <ul id="nav-mobile" class="right">
+							 <li><a href="/credits" class="tooltipped" data-position="bottom" data-delay="50" data-tooltip="Cuenta"><i class="material-icons">settings</i></a></li>
+							 <li><a href="/preferences" class="tooltipped" data-position="bottom" data-delay="50" data-tooltip="Salir"><i class="material-icons">close</i></a></li>
+						 </ul>
+					</div>
+			 </nav>
+
+			<!-- HERE BEGINS THE STUFF PART -->
+			 <div class="row" id="all-stuff">
+
+				<!-- Always use text-space for put stuff here -->
+				<div class="text-space">
+					<h4>What really matter is <strong>today.</strong> </h4>
+				</div>
+
+				<!-- Example: Card with number of credits -->
+				<div class="row">
+
+					<div class="col s12">
+
+						<div class="col s4 m4">
+							<div class="card positive-content z-depth-0">
+				        <div class="card-content white-text">
+				          <span class="card-title">Créditos</span>
+				          <p class="positive-green-c">+10</p>
+				        </div>
+				        <div class="card-action">
+				          <a href="#">Ver gasto total</a>
+				          <a href="#">Adquirir</a>
+				        </div>
+				      </div>
+						</div>
+
+						<div class="col s8 m8 offset-s4">
+							<div class="card positive-content z-depth-0">
+								<div class="card-content white-text">
+									<div id="curve_chart" class="positive-plot" style="width: auto; "></div>
+								</div>
+							</div>
+
+						</div>
+
+						<div class="col s5 m5">
+							<div class="card positive-content z-depth-0">
+				        <div class="card-content white-text">
+				          <span class="card-title">Personas evaluadas en abril</span>
+				          <p class="positive-red-c">10-</p>
+				        </div>
+				        <div class="card-action">
+				          <a href="#">Evaluar</a>
+				          <a href="#">Registrar</a>
+				        </div>
+				      </div>
+						</div>
+
+						<div class="col s7 m7">
+							<ul class="collection with-header positive-collection">
+				        <li class="collection-header"><h4><strong>LOS MEJORES</strong></h4></li>
+				        <li class="collection-item"><i class="material-icons">star_rate</i>Ricardo de la Vega</li>
+				        <li class="collection-item"><i class="material-icons">star_rate</i>Leo</li>
+				        <li class="collection-item"><i class="material-icons">star_rate</i>Nissim Heffes</li>
+				        <li class="collection-item"><i class="material-icons">star_rate</i>Dante Bazaldua</li>
+				      </ul>
+						</div>
+
+					</div>
+
+				</div> <!-- /.row -->
+
+			 </div> <!-- /#all-stuff -->
+
+		</div> <!-- /.editable -->
+
+	</div>
+	<!-- Example script for the charts -->
+	<script type="text/javascript">
+		google.charts.load('current', {'packages':['corechart']});
+		google.charts.setOnLoadCallback(drawChart);
+
+		function drawChart() {
+			var data = google.visualization.arrayToDataTable([
+				['Year', 'You', 'Other'],
+				['2004',  1000,      400],
+				['2005',  1170,      460],
+				['2006',  660,       1120],
+				['2007',  1030,      540]
+			]);
+
+			var options = {
+				// height: 500,
+				title: 'Your company vs that company you hate.',
+				curveType: 'function',
+				backgroundColor: '#292929',
+				enableInteractivity: true,
+				colors: ['#e31c1c','#07d9d2'],
+				fontName: 'Roboto',
+				titleTextStyle: { color: '#FFF' },
+				legendTextStyle: { color: '#FFF' },
+				hAxis: {
+				    textStyle:{color: '#FFF'}
+				},
+				vAxis: {
+				    textStyle:{color: '#FFF'}
+				}
+
+				// legend: { position: 'bottom' }
+			};
+
+			var chart = new google.visualization.LineChart(document.getElementById('curve_chart'));
+
+			chart.draw(data, options);
+		}
+	</script>
+
+	<script src="js/master.js" charset="utf-8"></script>
+	<script src="bower_components/less/dist/less.js" charset="utf-8"></script>
 </body>
 </html>
